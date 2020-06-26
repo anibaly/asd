@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es" style="height 100%; ">
+<head>
+    <title>Tu Mejor Oferta</title>
+    {% load static %}
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="{% static 'css/materialize.min.css' %}" >
+    <script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/lucas.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/materialize.min.js' %}"></script>
+</head>
+<body class="#e3f2fd blue lighten-5">
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo center">Tu Mejor Oferta en Valparaíso</a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li class= "active"><a ><a href="">Inicio</a></li>
+        <li ><a href="{%url "contacto" %}">Contacto</a></li>
+        <li><a href="{%url "ubicacion" %}">Ubicación</a></li>
+        <li><a href="{%url "calculadora" %}">Calculadora de Precios</a></li>
+      </ul>
+    </div>
+  </nav>
+    <div class="container">
+        <div class="row">
+
+            <div class="col s12">
+                <h4 style="text-align: center"></h4>
+            </div>
+            <div class="col s12 center-align">
+              <img src="{% static "img/img1.jpg" %}" height="300"/>
+            </div>
+            </div>
+
+            <div class= "col s12">
+               
+                <table>
+                    <thead>
+                      <tr>
+
+
+                          <th>Nombre del Producto</th>
+                          <th>Jumbo</th>
+                          <th>Unimarc</th>
+                          <th>Lider</th>
+                      </tr>
+                    </thead>
+            
+                    <tbody>
+                      <tr>
+                        <td>Harina (1kg)</td>
+                        <td>$839</td>
+                        <td>$440</td>
+                        <td>$460</td>
+                      </tr>
+                      <tr>
+                        <td>Azúcar (1kg)</td>
+                        <td>$569</td>
+                        <td>$810</td>
+                        <td>$690</td>
+                      </tr>
+                      <tr>
+                        <td>Fideos (400gr)</td>
+                        <td>$499</td>
+                        <td>$660</td>
+                        <td>$550</td>
+                      </tr>
+                      <tr>
+                        <td>Tallarines (400gr)</td>
+                        <td>$329</td>
+                        <td>$495</td>
+                        <td>$560</td>
+                      </tr>
+                      <tr>
+                        <td>Arroz (1kg)</td>
+                        <td>$589</td>
+                        <td>$750</td>
+                        <td>$850</td>
+                      <tr>
+                        <td>Té (Caja de 100)</td>
+                        <td>$2090</td>
+                        <td>$2060</td>
+                        <td>$1.890</td>  
+                        <tr>
+                            <td>Atún (170gr)</td>
+                            <td>$679</td>
+                            <td>$550</td>
+                            <td>$500</td>
+                            <tr>
+                                <td>Aceite Vegetal (900cc)</td>
+                                <td>$1199</td>
+                                <td>$1110</td>
+                                <td>$1470</td>
+                                <tr>
+                                    <td>Salsa de Tomate (200gr)</td>
+                                    <td>$479</td>
+                                    <td>$540</td>
+                                    <td>$380</td>
+                                    <tr>
+                                        <td>Porotos (1kg)</td>
+                                        <td>$2849</td>
+                                        <td>$2490</td>
+                                        <td>$2230</td>
+                                        <tr>
+                                            <td>Lentejas (1kg)</td>
+                                            <td>$1699</td>
+                                            <td>$1580</td>
+                                            <td>$1360</td>
+                                            <tr>
+                                                <td>Garbanzos (1kg)</td>
+                                                <td>$2599</td>
+                                                <td>$2410</td>
+                                                <td>$1651</td>
+                                                <tr>
+                                                    <td>Leche en Polvo (900gr)</td>
+                                                    <td>$4679</td>
+                                                    <td>$4710</td>
+                                                    <td>$4390</td>
+                                                    <tr>
+                                                        <td>Jurel Natural (300gr)</td>
+                                                        <td>$1319</td>
+                                                        <td>$1250</td>
+                                                        <td>$999</td>
+                                                        <tr>
+                                                            <td>Sal Fina (1kg)</td>
+                                                            <td>$299</td>
+                                                            <td>$270</td>
+                                                            <td>$190</td>
+                                                            <tr>
+                                                                <td>Puré de Papas (250gr)</td>
+                                                                <td>$1139</td>
+                                                                <td>$1390</td>
+                                                                <td>$1150</td>
+                                                                <tr>
+                                                                    <td>Mermelada (250gr)</td>
+                                                                    <td>$559</td>
+                                                                    <td>$380</td>
+                                                                    <td>$520</td>
+                                                                    <tr>
+
+                                                                        <tr>
+
+                                                
+                    </tbody>
+                  </table>
+
+            </div>
+        </div>
+    </div>   
+</body>
+</html>

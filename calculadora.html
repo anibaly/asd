@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang='es' style='height: 100%;'>
+<head>
+    <title>Tu Mejor Oferta</title>
+    {% load static %}
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="{% static 'css/materialize.min.css' %}" >
+    <script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/materialize.min.js' %}"></script>
+</head>
+<body class="indigo lighten-5">
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo center">Calculadora de Precios</a>
+            <ul id="nav-mobile" class="left hide-on-med-and-down">
+            <li><a href="{% url 'index' %}">Inicio</a></li>
+            <li><a href="{% url 'contacto' %}">Contacto</a></li>
+            <li><a href="{%url "ubicacion" %}">Ubicación</a></li>
+            <li><a href="{% url 'calculadora' %}">Calculadora de Precios</a></li>
+            </ul>
+        </div>
+        <div class="#572364">
+            <div align="center">
+            <a  href="http://127.0.0.1:8000/calculadora"><img src="{% static "img/boton.png" %}" height="300"/></a>
+        </div>
+        </div>
+        
+    </nav>
+
+<script type="text/javascript">
+    var harina=parseInt(prompt("Ingrese cantidad de Harina(1kg) que desea, si no desea escriba 0 "))
+    var azucar=parseInt(prompt("Ingrese cantidad de Azúcar(1kg) que desea, si no desea escriba 0 "))
+    var fideos=parseInt(prompt("Ingrese cantidad de Fideos(400gr) que desea, si no desea escriba 0 "))
+    var tallarines=parseInt(prompt("Ingrese cantidad de Tallarines(400gr) que desea, si no desea escriba 0 "))
+    var arroz=parseInt(prompt("Ingrese cantidad de Arroz(1kg) que desea, si no desea escriba 0 "))
+    var te=parseInt(prompt("Ingrese cantidad de Te(Caja de 100) que desea, si no desea escriba 0 "))
+    var atun=parseInt(prompt("Ingrese cantidad de Atún(170gr) que desea, si no desea escriba 0 "))
+    var aceite=parseInt(prompt("Ingrese cantidad de Aceite Vegetal(900cc) que desea, si no desea escriba 0 "))
+    var salsa=parseInt(prompt("Ingrese cantidad de Salsa de Tomate(200gr) que desea, si no desea escriba 0 "))
+    var porotos=parseInt(prompt("Ingrese cantidad de Porotos(1kg) que desea, si no desea escriba 0 "))
+    var lentejas=parseInt(prompt("Ingrese cantidad de Lentejas(1kg) que desea, si no desea escriba 0 "))
+    var garbanzos=parseInt(prompt("Ingrese cantidad de Garbanzos(1kg) que desea, si no desea escriba 0 "))
+    var leche=parseInt(prompt("Ingrese cantidad de leche en Polvo(900gr) que desea, si no desea escriba 0 "))
+    var jurel=parseInt(prompt("Ingrese cantidad de Jurel Natural(300gr) que desea, si no desea escriba 0 "))
+    var sal=parseInt(prompt("Ingrese cantidad de Sal Fina(1kg) que desea, si no desea escriba 0 "))
+    var pure=parseInt(prompt("Ingrese cantidad de Puré de Papas(250gr) que desea, si no desea escriba 0 "))
+    var mermelada=parseInt(prompt("Ingrese cantidad de Mermelada(250gr) que desea, si no desea escriba 0 "))
+
+
+    var sumaJ= harina*839+azucar*569+fideos*499+tallarines*329+arroz*589+te*2090+atun*679+aceite*1199+salsa*479+porotos*2849+lentejas*1699+garbanzos*2599+leche*4679+jurel*1319+sal*299+pure*1139+mermelada*559
+    var sumaU= harina*440+azucar*810+fideos*660+tallarines*495+arroz*750+te*2060+atun*550+aceite*1110+salsa*540+porotos*2490+lentejas*1580+garbanzos*2410+leche*4710+jurel*1250+sal*270+pure*1390+mermelada*380
+    var sumaL= harina*460+azucar*690+fideos*550+tallarines*560+arroz*850+te*1890+atun*500+aceite*1470+salsa*380+porotos*2230+lentejas*1360+garbanzos*1651+leche*4390+jurel*999+sal*190+pure*1150+mermelada*520
+
+</script>
+
+<script type="text/javascript">
+    if((sumaJ<sumaU)&&(sumaJ<sumaL)){
+        alert("El supermercado Jumbo te ofrece el monto total más económico que corresponde a: $"+sumaJ);
+        alert("Dirígete a la pestaña de ubicación para saber cuál es tu Jumbo más cercano.");
+    } else if ((sumaU<sumaJ)&&(sumaU<sumaL)){
+        alert("El supermercado Unimarc te ofrece el monto total más económico que corresponde a: $"+sumaU);
+        alert("Dirígete a la pestaña de ubicación para saber cuál es tu Unimarc más cercano.");
+    } else if ((sumaL<sumaJ)&&(sumaL<sumaU)){
+        alert("El supermercado Líder te ofrece el monto total más económico que corresponde a: $"+sumaL);
+        alert("Dirígete a la pestaña de ubicación para saber cuál es tu Líder más cercano.");
+    }
+</script>
