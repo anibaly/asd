@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang='es' style='height: 100%;'>
+<head>
+    <title>Mis mejores peliculas</title>
+    {% load static %}
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="{% static 'css/materialize.min.css' %}" >
+    <script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/materialize.min.js' %}"></script>
+    <script>
+        $(document).ready(function(){
+            $('.tabs').tabs();
+        });
+    </script>
+</head>
+<body class="indigo lighten-5">
+
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo center">Cómo llegar</a>
+            <ul id="nav-mobile" class="left hide-on-med-and-down">
+            <li><a href="{% url 'index' %}">Inicio</a></li>
+            <li><a ><a href="{% url 'contacto' %}">Contacto</a></li>            
+            <li class="active"><a href="">Ubicación</a></li>
+            <li><a href="{% url 'calculadora' %}">Calculadora de Precios</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col s4 offset-s4">
+                <div class="card">
+                    <div class="card-content">
+                        <span class="card-title">Como llegar</span>
+                        <p>Algunas ubicaciones de los supermercados de Valparaíso</p>
+                        
+                    </div>
+                    <div class="card-tabs">
+                        <ul class="tabs tabs-fixed-width">
+                        <li class="tab"><a class="active" href="#tab1">Jumbo</a></li>
+                        <li class="tab"><a href="#tab2">Unimarc</a></li>
+                        <li class="tab"><a href="#tab3">Líder</a></li>
+                        </ul>
+                    </div>
+                    <div class="card-content grey lighten-4">
+                        <div id="tab1">Av. Argentina #51</div>
+                        <div id="tab2">Av. Errázuriz # 629 / Av Obispo Valdes #1170</div>
+                        <div id="tab3">Almirante Wilkinson #202 / Av Obispo Valdes #1421 / Brasil #1303</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
